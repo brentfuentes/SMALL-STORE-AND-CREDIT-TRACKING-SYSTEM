@@ -1,7 +1,10 @@
 package ui;
 
 import dao.UserDao;
+<<<<<<< HEAD
 import java.util.Scanner;
+=======
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
 import model.ActivityLog;
 import model.User;
 
@@ -13,25 +16,39 @@ import static ui.MainMenu.confirmLogout;
 
 public class SuperAdminMenu {
 
+<<<<<<< HEAD
     private static UserDao userDao;
 
     static void superAdminMenu(UserDao sharedUserDao, Scanner scanner) {
         userDao = sharedUserDao;
         Console.setScanner(scanner);
+=======
+    private static final UserDao userDao = new UserDao();
+
+    static void superAdminMenu() {
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
         boolean loggedIn = true;
         while (loggedIn) {
             printHeader("SUPER ADMIN MENU");
             System.out.println("1. Pending Accounts");
             System.out.println("2. Activity Log");
+<<<<<<< HEAD
             System.out.println("3. Delete Admin/Staff Accounts");
             System.out.println("4. Logout");
+=======
+            System.out.println("3. Logout");
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
             System.out.println();
             int choice = readInt("Enter your choice: ");
 
             if (choice == 1) pendingAccounts();
             else if (choice == 2) activityLog();
+<<<<<<< HEAD
             else if (choice == 3) AccountDeletion.deleteAccounts(userDao, "ADMIN", "STAFF");
             else if (choice == 4) {
+=======
+            else if (choice == 3) {
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
                 if (confirmLogout()) {
                     activityLogDao.insert(currentUser.userId(), "LOGOUT");
                     currentUser = null;
@@ -76,7 +93,11 @@ public class SuperAdminMenu {
         int action = readInt("Enter your choice: ");
 
         if (action == 1) {
+<<<<<<< HEAD
             if (userDao.updateStatus(chosen.userId(), "APPROVED")) {
+=======
+            if (userDao.updateStatus(chosen.userId(), "ACTIVE")) {
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
                 System.out.println("Account of " + chosen.username() + " approved.");
             }
         } else if (action == 2) {

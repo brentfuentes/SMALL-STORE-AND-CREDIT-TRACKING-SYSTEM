@@ -39,7 +39,11 @@ public class UserDao {
         }
     }
 
+<<<<<<< HEAD
     // Used only to create the default accounts (already APPROVED) on first run.
+=======
+    // Used only to create the default accounts (already ACTIVE) on first run.
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
     public boolean insertWithStatus(String fullName, String username, String password,
                                     String userType, String status) {
         String sql = "INSERT INTO users (full_name, username, password, user_type, status) "
@@ -136,6 +140,7 @@ public class UserDao {
         return list;
     }
 
+<<<<<<< HEAD
     // All registered accounts, whatever their role or status.
     public List<User> getAllUsers() {
         return queryUsers("SELECT user_id, full_name, username, password, user_type, status "
@@ -194,6 +199,8 @@ public class UserDao {
         return list;
     }
 
+=======
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
     public boolean updateStatus(int userId, String status) {
         String sql = "UPDATE users SET status = ? WHERE user_id = ?";
         try (Connection conn = DatabaseConnection.getConnection();

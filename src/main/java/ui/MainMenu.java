@@ -1,10 +1,15 @@
 package ui;
 
+<<<<<<< HEAD
 import dao.UserDao;
 import model.*;
 
 import java.util.Scanner;
 
+=======
+import model.*;
+
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
 import static ui.AppData.*;
 import static ui.Console.*;
 import static ui.CreditMenu.creditMenu;
@@ -15,11 +20,15 @@ import static ui.SalesMenu.salesMenu;
 
 public class MainMenu {
 
+<<<<<<< HEAD
     private static UserDao userDao;
 
     static void mainMenu(UserDao sharedUserDao, Scanner scanner) {
         userDao = sharedUserDao;
         Console.setScanner(scanner);
+=======
+    static void mainMenu() {
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
         boolean loggedIn = true;
         boolean isAdmin = currentUser.isAdmin();
         while (loggedIn) {
@@ -50,6 +59,7 @@ public class MainMenu {
                 reportsOption = option++;
                 System.out.println(reportsOption + ". Reports");
             }
+<<<<<<< HEAD
             int userMgmtOption = -1;
             if (isAdmin) {
                 userMgmtOption = option++;
@@ -63,6 +73,8 @@ public class MainMenu {
             }
             int deleteOwnOption = option++;
             System.out.println(deleteOwnOption + ". Delete My Account");
+=======
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
             int logoutOption = option;
             System.out.println(logoutOption + ". Logout");
             System.out.println();
@@ -75,6 +87,7 @@ public class MainMenu {
             else if (choice == creditOption) creditMenu();
             else if (choice == recordsOption) recordsMenu();
             else if (isAdmin && choice == reportsOption) reportsMenu();
+<<<<<<< HEAD
             else if (isAdmin && choice == userMgmtOption) AdminMenu.adminMenu(userDao);
             else if (isAdmin && choice == deleteStaffOption) AccountDeletion.deleteAccounts(userDao, "STAFF");
             else if (choice == deleteOwnOption) {
@@ -82,6 +95,9 @@ public class MainMenu {
                     loggedIn = false;
                 }
             } else if (choice == logoutOption) {
+=======
+            else if (choice == logoutOption) {
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
                 if (confirmLogout()) {
                     activityLogDao.insert(currentUser.userId(), "LOGOUT");
                     currentUser = null;
