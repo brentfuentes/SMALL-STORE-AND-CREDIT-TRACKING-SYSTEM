@@ -8,7 +8,11 @@ import java.util.List;
 import static ui.AppData.*;
 import static ui.Console.*;
 
+<<<<<<< HEAD
 // User management screens for Admin: view users, view pending, approve, update role/status.
+=======
+// User management screens for Admin: view users, view pending, approve.
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
 public class AdminMenu {
 
     static void adminMenu(UserDao userDao) {
@@ -18,8 +22,12 @@ public class AdminMenu {
             System.out.println("1. View All System Users");
             System.out.println("2. View Pending Registrations");
             System.out.println("3. Approve User Account");
+<<<<<<< HEAD
             System.out.println("4. Update User Role/Status");
             System.out.println("5. Back");
+=======
+            System.out.println("4. Back");
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
             System.out.println();
             int choice = readInt("Enter your choice: ");
 
@@ -34,9 +42,12 @@ public class AdminMenu {
                     approveUserAccount(userDao);
                     break;
                 case 4:
+<<<<<<< HEAD
                     updateUserRoleAndStatus(userDao);
                     break;
                 case 5:
+=======
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
                     running = false;
                     break;
                 default:
@@ -108,6 +119,7 @@ public class AdminMenu {
             return;
         }
     }
+<<<<<<< HEAD
 
     // ================= UPDATE ROLE / STATUS =================
 
@@ -214,4 +226,6 @@ public class AdminMenu {
             System.out.println("Invalid status. Please enter one of: " + String.join(", ", VALID_STATUSES));
         }
     }
+=======
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
 }

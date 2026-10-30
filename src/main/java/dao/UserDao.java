@@ -39,7 +39,15 @@ public class UserDao {
         }
     }
 
+<<<<<<< HEAD
     // Used only to create the default accounts (already APPROVED) on first run.
+=======
+<<<<<<< HEAD
+    // Used only to create the default accounts (already APPROVED) on first run.
+=======
+    // Used only to create the default accounts (already ACTIVE) on first run.
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
     public boolean insertWithStatus(String fullName, String username, String password,
                                     String userType, String status) {
         String sql = "INSERT INTO users (full_name, username, password, user_type, status) "
@@ -136,6 +144,10 @@ public class UserDao {
         return list;
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
     // All registered accounts, whatever their role or status.
     public List<User> getAllUsers() {
         return queryUsers("SELECT user_id, full_name, username, password, user_type, status "
@@ -194,6 +206,11 @@ public class UserDao {
         return list;
     }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
     public boolean updateStatus(int userId, String status) {
         String sql = "UPDATE users SET status = ? WHERE user_id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -208,6 +225,7 @@ public class UserDao {
         }
     }
 
+<<<<<<< HEAD
     // Updates the role and status of one user. Inputs are upper-cased before saving.
     public boolean updateUserRoleAndStatus(int userId, String newRole, String newStatus) {
         String sql = "UPDATE users SET user_type = ?, status = ? WHERE user_id = ?";
@@ -223,6 +241,8 @@ public class UserDao {
         }
     }
 
+=======
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
     private User readUser(ResultSet rs) throws SQLException {
         return new User(rs.getInt("user_id"), rs.getString("full_name"),
                 rs.getString("username"), rs.getString("password"),

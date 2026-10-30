@@ -6,12 +6,22 @@ import java.util.Scanner;
 
 public class Console {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
     // The single shared Scanner. Main creates it and passes it in once at startup.
     public static Scanner sc = new Scanner(System.in);
 
     public static void setScanner(Scanner scanner) {
         sc = scanner;
     }
+<<<<<<< HEAD
+=======
+=======
+    public static final Scanner sc = new Scanner(System.in);
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
 
     static void printHeader(String title) {
         System.out.println();
@@ -60,6 +70,10 @@ public class Console {
     }
 
     // Generates a simple sequential ID such as P001, C002, TXN003, based on the
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
 
     // Prints any list of users as an aligned table: ID, Username, Role, Status.
     static void printUserTable(java.util.List<model.User> users) {
@@ -78,4 +92,9 @@ public class Console {
     private static String cut(String text, int max) {
         return text.length() <= max ? text : text.substring(0, max - 1) + ".";
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7c1f542e4a2df12ef376119142193edcd113c99b
+>>>>>>> a5eae130fb9f00c22f8e9282d20f82cb795b53d3
 }
